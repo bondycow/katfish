@@ -37,11 +37,11 @@ pip install python-chess PyQt5 numpy
 ### 3. Run the GUI
 To play as **white**:
 ```bash
-python katfish.py
+python main.py
 ```
 To play as **black**:
 ```bash
-python katfish.py -b
+python main.py -b
 ```
 
 ### 4. Keyboard Shortcuts

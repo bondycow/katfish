@@ -41,7 +41,7 @@ python main.py
 ```
 To play as **black**:
 ```bash
-python main.py -b
+python main.py b
 ```
 
 ### 4. Keyboard Shortcuts

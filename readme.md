@@ -50,3 +50,12 @@ python main.py -b
 → Go to the next board state (if applicable)
 
 Click a piece, then click a square to move it
+
+### 5. Opening Book Configuration
+*Recommended* to use the Cerebellum opening book.
+Download from https://zipproth.de/Brainfish/download/
+Put it into the `books` folder.
+Then, replace `BOOK_PATH` in `board_utils.py` with the path to your book file.
+```python
+BOOK_PATH = Path("")
+```

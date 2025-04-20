@@ -170,7 +170,7 @@ class ChessWindow(QWidget):
     def engine_reply(self):
         if self.board.is_game_over() or self.board.turn == self.human_is_white:
             return
-        # ---- NEW: try book first ---------------------------------------
+        # ---- NEW: try books first ---------------------------------------
         mv = book_move(self.board)
         if mv:
             self.make_move(mv)

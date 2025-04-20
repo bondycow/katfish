@@ -220,7 +220,12 @@ class Engine:
             # don’t look at the clock until min_depth done
             if depth >= min_depth and time.time() - start >= time_limit:
                 break
+        if best_move is None and not board.is_game_over():
+            # fallback: pick *any* legal move to delay mate
+            for mv in board.legal_moves:
+                return mv
         return best_move
+
 
 # ───────────────────────  PyQt GUI  ───────────────────────────────────
 class ChessWindow(QWidget):

@@ -6,18 +6,17 @@ Katfish – a compact CPU chess engine with a PyQt5 GUI.
 • Evaluation: Stockfish‑inspired material + PSQT (centipawns).
 """
 
-import sys, math, time, threading
+import os, sys, math, time
 from pathlib import Path
 from collections import namedtuple
 
-from PyQt5.QtCore import Qt, QTimer, QSize, QRect
+from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtWidgets import QApplication, QWidget, QMessageBox
-from PyQt5.QtGui import QFont, QPainter, QColor, QPixmap, QPainter
+from PyQt5.QtGui import QFont, QColor, QPixmap, QPainter
 from PyQt5.QtSvg import QSvgRenderer
 
 from katfish_nnue import NNUE
 
-import os
 import chess
 import chess.polyglot
 from chess.polyglot import zobrist_hash, open_reader

@@ -1,13 +1,9 @@
-#!/usr/bin/env python3
 """
-Katfish – a compact CPU chess engine with a Tkinter GUI.
+Katfish – a compact CPU chess engine with a PyQt5 GUI.
 
-• GUI uses Tk only ⇒ no extra GUI dependencies.
+• GUI uses PyQt5 only ⇒ no extra GUI dependencies.
 • Engine = iterative‑deepening α‑β/negamax + transposition table.
 • Evaluation: Stockfish‑inspired material + PSQT (centipawns).
-
-You play WHITE.  Click a piece, then its destination square.
-The engine (BLACK) thinks for ~2 s and replies automatically.
 """
 
 import sys, math, time, threading
@@ -22,8 +18,8 @@ from PyQt5.QtSvg import QSvgRenderer
 from katfish_nnue import NNUE
 
 import os
-import chess                               # pip install python-chess
-import chess.polyglot                      # for Zobrist keys only
+import chess
+import chess.polyglot
 from chess.polyglot import zobrist_hash, open_reader
 
 BOOK_PATH = Path(os.path.expanduser(
